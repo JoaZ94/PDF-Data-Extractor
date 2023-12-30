@@ -1,0 +1,11 @@
+# Dockerfile para la imagen personalizada de Jupyter
+FROM jupyter/base-notebook
+
+# Instala la biblioteca Pymupdf para trabajar con archivos PDF
+RUN pip install pymupdf
+
+# Instala la biblioteca Numpy
+RUN pip install numpy
+
+# Instala la biblioteca Pandas
+RUN pip install pandas

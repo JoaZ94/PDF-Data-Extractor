@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+
+  jupyter:
+    build: .
+    container_name: jupyter
+    restart: always
+    environment:
+      JUPYTER_ENABLE_APP: "yes"
+      JUPYTER_TOKEN: tokenjupyter
+    volumes:
+      - ./:/home/jovyan/work
+    ports:
+        - 8888:8888
+
